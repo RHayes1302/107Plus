@@ -5,15 +5,16 @@
 //  Created by Wendell Richards on 12/4/25.
 //
 import SwiftUI
+import SwiftData
 
 struct BookListView: View {
-    @Binding var books: [Book]
+    @Query var books: [PersistentBook]
     @State var showAddBookSheet: Bool = false
     @State var newBook = Book(title:"", author: "", details: "")
 
     var body: some View {
         NavigationStack{
-            List($books, id: \.self.id){ book in
+            List(books, id: \.self.id){ book in
                 NavigationLink(destination: DetailView(book: book)){
                     BookLinkItem(book: book)
                 }
@@ -23,10 +24,10 @@ struct BookListView: View {
                     showAddBookSheet.toggle()
                 })
              .sheet(isPresented: $showAddBookSheet){
-                 if(!newBook.title.isEmpty){
-                     books.append(newBook)
-                 }
-                 newBook = Book(title:"", author: "", details: "")
+//                 if(!newBook.title.isEmpty){
+//                     books.append(newBook)
+//                 }
+//                 newBook = Book(title:"", author: "", details: "")
              }
             content: {
                     AddEditView(bookToEdit: $newBook)

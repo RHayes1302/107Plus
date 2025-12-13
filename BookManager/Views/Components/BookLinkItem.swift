@@ -7,14 +7,14 @@
 import SwiftUI
 
 struct BookLinkItem: View {
-    @Binding var book: Book
+     let book: PersistentBook
     
     var body: some View {
         HStack{
-            Image(book.coverImage)
-                .resizable()
-                .scaledToFit()
-                .frame(maxWidth: 60, maxHeight: 60)
+//            Image(book.coverImage)
+//                .resizable()
+//                .scaledToFit()
+//                .frame(maxWidth: 60, maxHeight: 60)
             VStack(alignment: .leading ){
                 Text(book.title)
                 Text(book.author)

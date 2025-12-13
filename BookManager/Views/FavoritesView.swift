@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @AppStorage(SETTINGS_GRID_COLUMNS) var gridColumns: Int = 2
+    
     @Binding var books: [Book]
     
     @State var selectedGenre: Genre?
     @State var selectedReadingStatus: ReadingStatus?
     
-    let gridLayout = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-    ]
-    
+//    var gridLayout: [GridItem] = {
+//        Array(repeating: GridItem(.flexible()), count: gridColumns)
+//    }
+//    
     @State private var isFilterSheetPresented: Bool = false
     
     //Computed Variable -> as soon as books binding variable changes the new variable will compute itself to match the state
@@ -42,14 +43,14 @@ struct FavoritesView: View {
                     }
                 }
 
-                LazyVGrid(columns: gridLayout) {
-                    ForEach(favoriteBooks, id: \.id) { book in
-                        NavigationLink(destination: DetailView(book: book)){
-                            BookCard(book: book)
-                        }
-                    }
-                    
-                }.padding(.horizontal)
+//                LazyVGrid(columns: gridLayout) {
+//                    ForEach(favoriteBooks, id: \.id) { book in
+//                        NavigationLink(destination: DetailView(book: book)){
+//                            BookCard(book: book)
+//                        }
+//                    }
+//                    
+//                }.padding(.horizontal)
             }.navigationBarTitle("My Favorite Books")
                 .padding(20)
                 .toolbar {
