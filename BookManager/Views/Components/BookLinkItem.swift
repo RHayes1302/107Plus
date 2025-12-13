@@ -11,10 +11,10 @@ struct BookLinkItem: View {
     
     var body: some View {
         HStack{
-//            Image(book.coverImage)
-//                .resizable()
-//                .scaledToFit()
-//                .frame(maxWidth: 60, maxHeight: 60)
+            Image(uiImage: (book.coverImage != nil ? UIImage(data: book.coverImage!)! : UIImage(resource: .defaultBook)))
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: 60, maxHeight: 60)
             VStack(alignment: .leading ){
                 Text(book.title)
                 Text(book.author)

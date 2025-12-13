@@ -6,6 +6,7 @@
 //
 
 import SwiftData
+import Foundation
 
 @Model
 class PersistentBook {
@@ -19,6 +20,8 @@ class PersistentBook {
     var genre: Genre
     var isFavorite: Bool
     
+    var coverImage: Data?
+    
     init(title: String,
          author: String="",
          summary: String="",
@@ -26,7 +29,9 @@ class PersistentBook {
          status: ReadingStatus = .unknown,
          rating: Int=0,
          genre: Genre = .unknown,
-         isFavorite: Bool = false)
+         isFavorite: Bool = false,
+         coverImage: Data? = nil
+    )
     {
         self.title = title
         self.author = author
@@ -36,6 +41,7 @@ class PersistentBook {
         self.rating = rating
         self.genre = genre
         self.isFavorite = isFavorite
+        self.coverImage = coverImage
     }
     
 

@@ -10,7 +10,6 @@ import SwiftData
 struct BookListView: View {
     @Query var books: [PersistentBook]
     @State var showAddBookSheet: Bool = false
-    @State var newBook = Book(title:"", author: "", details: "")
 
     var body: some View {
         NavigationStack{
@@ -30,7 +29,7 @@ struct BookListView: View {
 //                 newBook = Book(title:"", author: "", details: "")
              }
             content: {
-                    AddEditView(bookToEdit: $newBook)
+                    AddEditView()
                 }
         }
     }

@@ -72,7 +72,7 @@ struct DetailView: View{
             showEditBookSheet.toggle()
         })
         .sheet(isPresented: $showEditBookSheet){
-//            AddEditView(bookToEdit: book)
+            AddEditView(book: book)
         }
     }
 }
