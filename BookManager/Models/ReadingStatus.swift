@@ -2,7 +2,7 @@
 //  ReadingStatus.swift
 //  BookManager
 //
-//  Created by Wendell Richards on 12/2/25.
+//  Created by Ramone Hayes on 12/2/25.
 //
 
 // This is an enum that will be used ro determine all the possible

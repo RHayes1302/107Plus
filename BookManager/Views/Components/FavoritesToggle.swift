@@ -2,7 +2,7 @@
 //  FavoritesToggle.swift
 //  BookManager
 //
-//  Created by Wendell Richards on 12/4/25.
+//  Created by Ramone Hayes on 12/4/25.
 //
 
 import SwiftUI

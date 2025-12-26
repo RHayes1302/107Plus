@@ -2,7 +2,7 @@
 //  BookManagerApp.swift
 //  BookManager
 //
-//  Created by Wendell Richards on 11/22/25.
+//  Created by Ramone Hayes on 11/22/25.
 //
 
 import SwiftUI

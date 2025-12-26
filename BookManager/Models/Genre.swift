@@ -2,7 +2,7 @@
 //  Genre.swift
 //  BookManager
 //
-//  Created by Wendell Richards on 12/2/25.
+//  Created by Ramone Hayes on 12/2/25.
 //
 
 enum Genre: String, CaseIterable, Hashable, Codable {

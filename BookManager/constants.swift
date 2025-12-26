@@ -2,7 +2,7 @@
 //  constants.swift
 //  BookManager
 //
-//  Created by Wendell Richards on 12/11/25.
+//  Created by Ramone Hayes on 12/11/25.
 //
 public let SETTINGS_THEME = "SETINGS_THEME"
 public let SETTINGS_GRID_COLUMNS = "SETTINGS_GRID_COLUMNS"
